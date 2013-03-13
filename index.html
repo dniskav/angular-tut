@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+	<script src="assets/vendor/angular.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script type="text/javascript" src='assets/app.js'></script>
+</head>
+
+
+<body>
+	
+
+	<div ng-controller='myController'>
+		<input type="text" ng-model='myProp'>
+		<select ng-model='selectedFruit' ng-options='fruit for fruit in dropDownItems'></select>
+		Hello World!
+		<button ng-click='test()'>Click me</button>
+		<button ng-click='add()'>add</button>
+
+		<ul>
+			<li ng-repeat='item in items'>{{item.name}} - {{item.fruit}}</li>
+		</ul>
+
+		<hr>
+		<h2>Debug info</h2>
+
+		{{myProp}}<br>
+		{{dropDownItems}}<br>
+		{{selectedFruit}} <br>
+		{{items}}
+
+	</div>
+
+</body>
+
+
+</html>
